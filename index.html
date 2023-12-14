@@ -47,7 +47,7 @@
 fetchJobs: async function(){
     try {
         const response = await fetch('https://api.apify.com/v2/acts/ivanvs~remoteok-job-scraper/runs/last/dataset/items?token=apify_api_83jnc51pAkJ6G6I7L7j6mmZHwbfUGy3pff02');
-        this.data = await response.json();
+        this.jobs = await response.json();
     } catch (error) {
         console.error('Error fetching data:', error);
     }
